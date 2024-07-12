@@ -39,6 +39,8 @@ const YoutubeForm = () => {
       initialValues={initialValues}
       onSubmit={onSubmit}
       validationSchema={validationSchema}
+      // validateOnChange={false}
+      // validateOnBlur={false}
     >
       <Form>
         <div className="form-control">
@@ -75,7 +77,7 @@ const YoutubeForm = () => {
           <label htmlFor="address">Address</label>
           <FastField name="address">
             {(props) => {
-              console.log("Field render");
+              // console.log("Field render");
               const { field, form, meta } = props;
               return (
                 <div>
@@ -114,7 +116,7 @@ const YoutubeForm = () => {
               const { push, remove, form } = fieldArrayProps;
               const { values } = form;
               const { phNumbers } = values;
-
+              console.log("form errors", form.errors);
               return (
                 <div>
                   {phNumbers.map((phNumber, index) => (
