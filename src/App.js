@@ -1,12 +1,7 @@
-import './App.css';
-import YoutubeForm from './components/YoutubeForm';
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <YoutubeForm />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
