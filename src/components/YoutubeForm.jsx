@@ -49,6 +49,7 @@ const YoutubeForm = () => {
       validationSchema={validationSchema}
       // validateOnChange={false}
       // validateOnBlur={false}
+      // validateOnMount
     >
       {(formik) => {
         console.log("Formik props", formik);
@@ -185,7 +186,9 @@ const YoutubeForm = () => {
             >
               Visit fields
             </button>
-            <button type="submit">Submit</button>
+            <button type="submit" disabled={!(formik.isValid && formik.dirty)}>
+              Submit
+            </button>
           </Form>
         );
       }}
