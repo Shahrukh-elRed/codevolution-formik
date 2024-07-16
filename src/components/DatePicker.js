@@ -17,10 +17,7 @@ const DatePicker = ({ label, name, ...rest }) => {
               {...field}
               {...rest}
               selected={value}
-              onChange={(val) =>
-                // setFieldValues(name, val)
-                setFieldValue(name, JSON.parse(JSON.stringify(val)))
-              }
+              onChange={(val) => setFieldValue(name, val)}
             />
           );
         }}
